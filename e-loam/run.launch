@@ -1,0 +1,14 @@
+<launch>
+    
+    <!--- Sim Time -->
+    <param name="/use_sim_time" value="true" />
+
+    <!--- Run Rviz-->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find e_loam)/e_loam.rviz" />
+
+    <node pkg="e_loam" type="feature_extraction_node" name="lidar_feature_extraction_node" output="screen" />
+    <node pkg="e_loam" type="lidar_odometry_loam_node"      name="lidar_odometry_loam_node" output="screen" />
+    <node pkg="e_loam" type="lidar_odometry_ndt_node"       name="lidar_odometry_ndt_node"  output="screen" />
+    <node pkg="e_loam" type="lidar_mapping_node"            name="lidar_mapping_node"    output="screen"/>
+
+</launch>
