@@ -21,6 +21,7 @@ Build this project as a ROS package
 ### Run E-LOAM
    
  ```
+ roslaunch e_loam run.launch 
  ```
    
 
